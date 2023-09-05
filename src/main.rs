@@ -51,12 +51,12 @@ fn main() {
     let o = match op {
         '+' => Operation::Add(v1, v2),
         '-' => Operation::Subtract(v1, v2),
-        '/' => Operation::Multiply(v1, v2),
-        '*' => Operation::Divide(v1, v2),
+        '*' => Operation::Multiply(v1, v2),
+        '/' => Operation::Divide(v1, v2),
         _ => panic!("On the disco"),
     };
 
     // let's call our calculate function
     let res: f64 = calculate(o);
-    println!("Thanks! The result is: {}", res);
+    println!("Thanks! The result of '{}{}{}' is: {}", v1, op, v2, res);
 }
